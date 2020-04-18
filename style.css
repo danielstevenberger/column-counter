@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Sen", Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    padding-left: 0px;
+    text-align: center;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+li{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* About */
+img{
+    height: 30%;
+    width: 30%;
+    margin: 20px;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* About */
+.navbar{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 20px;
+    width: 60%;
+}
+
+.playButton{
+    text-align: center;
+    font-size: 20px;
+    width: 150px;
+    height: 30px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+
+.setup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    margin: 10px;
+    margin-bottom: 17px;
+}
+
+select{
+    width: 50px;
+    height: 20px;
+    margin: 5px;
+}
+
+label{
+    margin: 5px;
+}
+
+.puzzle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rowsCols{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.layer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otherLayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.outer{
+    display: flex;
+    flex-direction: row;
+}
+
+.inner{
+    display: flex;
+    flex-direction: row;
+}
+
+.sums{
+    display: flex;
+    flex-direction: row;
+}
+
+#sum{
+   background-color: darkcyan;
+}
+
+.box{
+    background-color: white;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: black solid 3px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.smallBox{
+    height: 46px;
+    width: 46px;
+    margin: 17px;
+}
+
+.hiddenBox{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin: 15px;
+    margin-bottom: 5px;
+}
+
+.previous{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    border: black solid 3px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+button:active {
+    outline: none;
+}
+
+.next{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    border: black solid 3px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#equalSign{
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.boxGrow{
+    animation: growBox 5s linear forwards;
+}
+
+.boxShrink{
+    animation: shrinkBox 1s linear forwards;
+}
+
+.boxRotate{
+    animation: spinBox 5s linear infinite;
+}
+
+@keyframes growBox {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+
+@keyframes shrinkBox {
+    from {
+      transform: scale(1.25);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+@keyframes spinBox {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@media all and (max-width: 1000px){
+    #sum{
+        font-size: 15px;
+    }
+    li{
+        font-size: 15px;
+    }
+    .box{
+        width: 40px;
+        height: 40px;
+        border: black solid 2px;
+        margin: 5px;
+    }
+    .smallBox{
+        font-size: 18px;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+    .hiddenBox{
+        width: 40px;
+        height: 40px;  
+        margin: 5px;    
+    }
+    .otherLayer{
+        margin-top: -50px;
+    }
+    .previous{
+        width: 40px;
+        height: 40px;
+        border: black solid 2px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    .next{
+        width: 40px;
+        height: 40px;
+        border: black solid 2px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+}
+
+@media all and (max-width: 500px){
+    p{
+        width: 90%;
+    }
+    li{
+        font-size: 15px;
+    }
+    #sum{
+        font-size: 13px;
+    }
+    .box{
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+        border: black solid 2px;
+        margin: 3px;
+    }
+    .smallBox{
+        font-size: 12px;
+        height: 22px;
+        width: 22px;
+        margin: 7px;
+    }
+    .hiddenBox{
+        width: 30px;
+        height: 30px;  
+        margin: 3px;    
+    }
+    .otherLayer{
+        margin-top: -36px;
+    }
+    .previous{
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+        border: black solid 2px;
+        border-radius: 10px;
+        margin: 3px;
+    }
+    .next{
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+        border: black solid 2px;
+        border-radius: 10px;
+        margin: 3px;
+    }
+}
